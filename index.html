@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link rel="stylesheet" href="/style/style.css"/>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let currentSlide = 0;
+
+      function showSlide(n) {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + n + slides.length) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }
+
+      showSlide(0);
+    </script>
+    <title>Sobre Nós - FuturePhone Store</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+      src = "script.js";
+    </script>
+    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Bem-vindo à FuturePhone Store</h1>
+      <div class="faixa">
+        <div class="botoes">
+          <button
+            class="botoes"
+            onclick="window.location.href='./sobrenos.html'"
+          >
+            Sobre Nós
+          </button>
+          <button
+            class="botoes"
+            onclick="window.location.href='/produtos.html'"
+          >
+            Produtos
+          </button>
+        </div>
+      </div>
+      <p>
+        Buscamos redefinir a experiência de compra de smartphones, oferecendo a
+        você uma fusão perfeita entre tecnologia de ponta e elegância
+        sofisticada. Na FuturePhone Store, nossa equipe de especialistas está
+        pronta para guiá-lo em sua jornada tecnológica, garantindo o melhor
+        atendimento e produtos autênticos dos principais fabricantes.
+        Acreditamos em um futuro sustentável e nos esforçamos para causar um
+        impacto positivo.
+      </p>
+      <div class="swiper-container" style="text-align: center">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+            class="imagem-slide"
+            height="380"
+            width="600"
+            src="images/Celular2.jpeg"
+            alt="Slide 3"
+          />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="imagem-slide"
+              height="380"
+              width="600"
+              src="images/Celular3.jpeg"
+              alt="Slide 3"
+            />
+          </div>
+          <!-- Adicione mais slides conforme necessário -->
+        </div>
+
+        <!-- Navegação e paginação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Incluir a biblioteca Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Inicializar o swiper slide
+      var swiper = new Swiper(".swiper-container", {
+        // Configurações do swiper
+        // Por exemplo, você pode definir a direção do slide, a velocidade, o modo de paginacão, etc.
+        // Veja a documentação do Swiper.js para mais opções de configuração: https://swiperjs.com/api/
+        loop: true, // Permite que os slides fiquem em loop infinito
+        slidesPerView: 1, // Quantidade de slides visíveis na tela
+        spaceBetween: 20, // Espaçamento entre os slides
+        navigation: {
+          nextEl: ".swiper-button-next", // Elemento para avançar para o próximo slide
+          prevEl: ".swiper-button-prev", // Elemento para voltar ao slide anterior
+        },
+        pagination: {
+          el: ".swiper-pagination", // Elemento para a paginacão dos slides (pontos indicando o número de slides)
+        },
+      });
+    </script>
+  </body>
+</html>
