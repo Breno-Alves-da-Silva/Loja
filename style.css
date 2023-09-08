@@ -205,3 +205,8 @@ body {
     font-size: 18px;
     font-weight: bold;
   }
+@media screen and (max-width: 1024px){
+img{
+    width:100%;
+}
+}
