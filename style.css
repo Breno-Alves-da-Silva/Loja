@@ -205,8 +205,13 @@ body {
     font-size: 18px;
     font-weight: bold;
   }
-@media screen and (max-width: 1024px){
+/* Exemplo de media query */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 img{
     width:100%;
 }
 }
+
